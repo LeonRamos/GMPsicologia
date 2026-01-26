@@ -102,6 +102,19 @@ section ul li::before {
 section ul li {
   margin-bottom: 0.3rem;
 }
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-gm {
+  height: 70px;        /* prueba entre 60–90px */
+  width: auto;
+  border-radius: 12px; /* opcional, para suavizar bordes si es PNG cuadrado */
+  background: transparent;
+}
+
 
 .hero {
   display: grid;
