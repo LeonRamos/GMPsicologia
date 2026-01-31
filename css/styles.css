@@ -180,6 +180,49 @@ section ul li {
   }
 }
 
+/* Sección Nosotros */
+.nosotros {
+  /* ya hereda el estilo base de section */
+}
+
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.8rem;
+  align-items: flex-start;
+  margin-top: 0.8rem;
+}
+
+.nosotros-texto p {
+  margin-bottom: 0.7rem;
+}
+
+.nosotros-datos h3 {
+  margin-bottom: 0.5rem;
+  color: var(--color-principal);
+}
+
+.nosotros-datos ul {
+  list-style: none;
+  margin-top: 0.3rem;
+  padding-left: 0;
+}
+
+.nosotros-datos ul li::before {
+  content: "•";
+  color: var(--color-secundario);
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+}
+
+@media (max-width: 900px) {
+  .nosotros-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* Bloque de contacto destacado */
 .contacto-grid {
   display: grid;
@@ -249,6 +292,80 @@ section ul li {
   color: #000000;              /* títulos negros solo en contacto */
 }
 
+/* Equipo */
+#equipo {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 1.5rem 0 0 0;
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.equipo-card {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.2rem;
+  background-color: var(--color-blanco);
+  border-radius: 18px;
+  padding: 1.5rem 1.7rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  align-items: center;
+}
+
+.equipo-foto {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.equipo-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.equipo-info {
+  text-align: left;
+}
+
+.equipo-nombre {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  color: var(--color-texto);
+}
+
+.equipo-rol {
+  font-size: 0.95rem;
+  color: var(--color-secundario);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.equipo-resumen {
+  font-size: 0.9rem;
+  color: var(--color-texto);
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .equipo-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .equipo-info {
+    text-align: center;
+  }
+}
+
+
 /* Servicios */
 #servicios {
   background-color: transparent;
@@ -288,6 +405,80 @@ section ul li {
   color: var(--color-texto);
 }
 
+.highlight {
+  max-width: 1100px;
+  margin: 1.5rem auto 0.5rem;
+  padding: 0.9rem 1.2rem;
+  background: linear-gradient(90deg, rgba(0,125,179,0.08), rgba(0,168,160,0.08));
+  border-left: 5px solid var(--color-principal);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.highlight p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-texto);
+}
+
+.chips {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  text-align: left;
+  padding: 1.5rem 1rem;
+}
+
+.chips h2 {
+  border: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+  color: var(--color-principal);
+}
+
+/* Contenedor general */
+.chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem 1rem;
+}
+
+/* Base de todos los chips */
+.chip {
+  padding: 0.4rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+  cursor: default;
+  user-select: none;
+  transition: transform 0.15s ease;
+  color: var(--color-texto);
+}
+
+/* Colores alternados (puedes mover clases entre spans) */
+.chip-1 { background-color: #f3ede9; }  /* beige */
+.chip-2 { background-color: #e3eef6; }  /* azul muy claro */
+.chip-3 { background-color: #f7e5ea; }  /* rosa suave */
+.chip-4 { background-color: #eaf3ef; }  /* verde muy claro */
+
+/* Chips vacíos para rellenar espacio (sin texto visible) */
+.chip-empty {
+  background-color: #f5f5f5;
+  color: transparent;
+}
+
+/* Rebote suave */
+.chip:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .chip {
+    font-size: 0.8rem;
+    padding: 0.35rem 1.1rem;
+  }
+}
 
 /* Footer */
 footer {
